@@ -1,5 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Author tolstoi = new Author("Лев", "Толстой");
+        Book book = new Book("Война и мир", tolstoi, 1869);
+        Author gogol=new Author("Николай", "Гоголь");
+        Book book1=new Book("Мертвые души", gogol,1842);
+        book.setPublishingYear(1880);
     }
 }
