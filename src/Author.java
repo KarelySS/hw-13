@@ -13,9 +13,13 @@ public class Author {
         return firstName;
     }
 
+    public String getMiddleName() {
+        return middleName;
+    }
+
     @Override
     public String toString() {
-        return firstName+" "+middleName;
+        return firstName + " " + middleName;
     }
 
     @Override
@@ -23,16 +27,12 @@ public class Author {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Author author = (Author) o;
-        return Objects.equals(firstName, author.firstName) && Objects.equals(middleName, author.middleName);
+        return Objects.equals(firstName, author.firstName) &&
+                Objects.equals(middleName, author.middleName);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(firstName, middleName);
-    }
-
-    public String getMiddleName() {
-        return middleName;
-
     }
 }

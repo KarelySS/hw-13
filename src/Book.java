@@ -23,6 +23,10 @@ public class Book {
         return publishingYear;
     }
 
+    public void setPublishingYear(int publishingYear) {
+        this.publishingYear = publishingYear;
+    }
+
     @Override
     public String toString() {
         return "\""+name +"\""+ ", " + author.toString() + ", (" + publishingYear+")";
@@ -40,10 +44,5 @@ public class Book {
     @Override
     public int hashCode() {
         return Objects.hash(name, author, publishingYear);
-    }
-
-    public void setPublishingYear(int publishingYear) {
-        this.publishingYear = publishingYear;
-
     }
 }
